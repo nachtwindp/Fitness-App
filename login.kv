@@ -41,7 +41,6 @@ MDScreen:
             pos_hint: {'center_x': 0.5, 'center_y':0.1}
             md_bg_color: (169/255, 169/255, 169/255, 1)
             on_press:
-                if validate_fields(): \
-                username = name_field.text \
-                app.root.get_screen('main_menu').ids.hello.text = f"Hello, {username}" \
-                root.manager.current = "main_menu" 
+                username = name_field.text
+                app.root.get_screen('main_menu').ids.hello.text = f"Hello, {username}"
+                root.manager.current = "main_menu"
