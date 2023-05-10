@@ -1,0 +1,30 @@
+MDScreen:
+    name:"workout"
+    MDFloatLayout:
+        md_bg_color: (33/255, 150/255, 243/255, 1)
+        Image:
+            source:"abs.png"
+            theme_text_color: 'Custom'
+            icon_color: [1, 1, 1, 1] # set icon color to original
+            user_font_size: "32sp"
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+    MDLabel:
+        text: "Choose your workout"
+        theme_text_color: "Custom"
+        text_color: "white"
+        font_size:30
+        font_name: "Roboto"
+        pos_hint: {'center_x': 0.55, 'center_y':0.9}
+    MDRoundFlatButton:
+        text: "Push-up challenge"
+        font_size:30
+        line_width: 0.01
+        font_name: "Roboto"
+        text_color: "white"
+        md_bg_color: [0, 0, 0, 0] # set background to transparent
+        size_hint:(0.8, 0.1)
+        pos_hint: {'center_x': 0.5, 'center_y':0.5}
+        on_press:
+            root.manager.current = "training"
+
+

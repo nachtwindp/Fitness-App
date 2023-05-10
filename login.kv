@@ -1,0 +1,47 @@
+MDScreen:
+    name: "login"
+    MDFloatLayout:
+        md_bg_color: (255/255, 255/255, 255/255, 1)
+        MDTextField:
+            id: name_field
+            hint_text: "Name"
+            max_text_length: 15
+            pos_hint: {"center_x": .5, "center_y": .65}
+            size_hint_x: .8
+            mode: "round"
+        MDTextField:
+            hint_text: "Date dd/mm/yyyy"
+            max_text_length: 10
+            size_hint_x: .8
+            pos_hint: {"center_x": .5, "center_y": .28}
+            date_format: "dd/mm/yyyy"
+            mode: "round"
+            background_color: (169/255, 169/255, 169/255, 1)
+        MDTextField:
+            hint_text: "Enter your weight"
+            mode: "round"
+            max_text_length: 3
+            size_hint_x: .8
+            helper_text: "Kilograms"
+            pos_hint: {"center_x": .5, "center_y": .53}
+        MDTextField:
+            hint_text: "Enter your height"
+            max_text_length: 3
+            line_width: 2  # sets the width of the line
+            mode: "round"
+            helper_text: "in cm"
+            size_hint_x: .8
+            pos_hint: {"center_x": .5, "center_y": .4}
+        MDFillRoundFlatButton:
+            text: "Continue"
+            text_color: "white"
+            font_size: 30
+            font_name: "Roboto"
+            size_hint:(0.6, 0.1)
+            pos_hint: {'center_x': 0.5, 'center_y':0.1}
+            md_bg_color: (169/255, 169/255, 169/255, 1)
+            on_press:
+                if validate_fields(): \
+                username = name_field.text \
+                app.root.get_screen('main_menu').ids.hello.text = f"Hello, {username}" \
+                root.manager.current = "main_menu" 

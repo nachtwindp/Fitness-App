@@ -1,0 +1,64 @@
+MDScreen:
+    name:"main_menu"
+    MDFloatLayout:
+        md_bg_color: (33/255, 150/255, 243/255, 1)
+    MDRectangleFlatIconButton:
+        icon: "logo.png"
+        text: "My health"
+        size_hint_x: .5
+        size_hint_y: 0.2
+        theme_text_color: "Custom"
+        text_color: "white"
+        line_color: "red"
+        md_bg_color: (33/255, 33/255, 33/255, 1)
+        pos_hint: {'center_x': 0.25, 'center_y':0.5}
+        theme_icon_color: "Custom"
+        icon_color: "orange"
+    MDRectangleFlatIconButton:
+        icon: "logo.png"
+        text: "Workout"
+        size_hint_x: .5
+        size_hint_y: 0.2
+        theme_text_color: "Custom"
+        text_color: "white"
+        line_color: "red"
+        md_bg_color: (33/255, 33/255, 33/255, 1)
+        pos_hint: {'center_x': 0.75, 'center_y':0.5}
+        theme_icon_color: "Custom"
+        icon_color: "orange"
+        on_press:
+            root.manager.current = "workout"
+    MDRectangleFlatIconButton:
+        icon: "logo.png"
+        icon_size: "32sp"
+        font_size: 23.5
+        text: "Timetable"
+        size_hint_x: .5
+        size_hint_y: 0.2
+        theme_text_color: "Custom"
+        text_color: "white"
+        line_color: "red"
+        md_bg_color: (33/255, 33/255, 33/255, 1)
+        pos_hint: {'center_x': 0.25, 'center_y':0.3}
+        theme_icon_color: "Custom"
+        icon_color: "orange"
+    MDRectangleFlatIconButton:
+        icon: "logo.png"
+        text: "Diet"
+        size_hint_x: 0.5
+        size_hint_y: 0.2
+        theme_text_color: "Custom"
+        text_color: "white"
+        line_color: "red"
+        md_bg_color: (33/255, 33/255, 33/255, 1)
+        pos_hint: {'center_x': 0.75, 'center_y':0.3}
+        theme_icon_color: "Custom"
+        icon_color: "orange"
+    MDLabel:
+        id: hello
+        text: f"hello"
+        theme_text_color: "Custom"
+        text_color: 1,1,1,1
+        pos_hint: {'center_x': 0.55, 'center_y':0.8}
+        font_size: 30
+        font_name: "Roboto"

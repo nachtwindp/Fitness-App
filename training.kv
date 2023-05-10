@@ -1,0 +1,32 @@
+MDScreen:
+    push: 0
+    name:"training"
+    MDFloatLayout:
+        md_bg_color: (33/255, 150/255, 243/255, 1)
+    MDLabel:
+        text: "Do as many push ups as possible"
+        theme_text_color: "Custom"
+        halign: "center"
+        text_color: "white"
+        font_size:30
+        font_name: "Roboto"
+        pos_hint: {'center_x': 0.5, 'center_y':0.9}
+    Label:
+        id:counter
+        text: str(root.push)
+    MDFloatingActionButton:
+        icon: 'weight-lifter'
+        pos_hint: {"center_x": 0.5, "center_y": 0.4}
+        size_hint: (0.3, 0.1)
+        md_bg_color: (1, 0, 0, 1)
+        on_press: root.push += 1
+    MDFloatingActionButton:
+        icon: 'exit-to-app'
+        pos_hint: {"center_x": 0.9, "center_y": 0.1}
+        md_bg_color: (0, 0, 0, 0)
+        on_press:
+            root.manager.transition.direction = "left"
+            root.manager.current = "workout"
+            root.push = 0
+
+
