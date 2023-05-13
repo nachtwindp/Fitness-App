@@ -2,6 +2,9 @@ MDScreen:
     name: "login"
     MDFloatLayout:
         md_bg_color: (255/255, 255/255, 255/255, 1)
+        Image:
+            source:"muscle.png"
+            pos_hint: {"center_x": 0.5, "center_y": 0.7}
         MDTextField:
             id: name_field
             hint_text: "Name"
@@ -42,5 +45,5 @@ MDScreen:
             md_bg_color: (169/255, 169/255, 169/255, 1)
             on_press:
                 username = name_field.text
-                app.root.get_screen('main_menu').ids.hello.text = f"Hello, {username}"
+                app.root.get_screen('main_menu').ids.hello.text = f"Welcome, {username}"
                 root.manager.current = "main_menu"

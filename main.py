@@ -20,6 +20,8 @@ class SweatWell(MDApp):
         sm.add_widget(Builder.load_file("workout.kv"))
         sm.add_widget(Builder.load_file("training.kv"))
         sm.add_widget(Builder.load_file("date.kv"))
+        sm.add_widget(Builder.load_file("food.kv"))
+        sm.add_widget(Builder.load_file("stats.kv"))
         return sm
 
     def on_start(self):

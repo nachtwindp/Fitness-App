@@ -3,25 +3,31 @@ MDScreen:
     MDFloatLayout:
         md_bg_color: (33/255, 150/255, 243/255, 1)
     MDRectangleFlatIconButton:
-        icon: "logo.png"
+        icon: "heart_made_by_me.png"
+        font_size: 20
+        text_padding: "30dp"
         text: "My health"
         size_hint_x: .5
         size_hint_y: 0.2
         theme_text_color: "Custom"
         text_color: "white"
-        line_color: "red"
+        line_color: "gray"
         md_bg_color: (33/255, 33/255, 33/255, 1)
         pos_hint: {'center_x': 0.25, 'center_y':0.5}
         theme_icon_color: "Custom"
         icon_color: "orange"
+        on_press:
+            root.manager.current = "stats"
     MDRectangleFlatIconButton:
-        icon: "logo.png"
+        icon: "dumbell_made_by_me.png"
+        icon_size: "32sp"
+        font_size: 23.5
         text: "Workout"
         size_hint_x: .5
         size_hint_y: 0.2
         theme_text_color: "Custom"
         text_color: "white"
-        line_color: "red"
+        line_color: "gray"
         md_bg_color: (33/255, 33/255, 33/255, 1)
         pos_hint: {'center_x': 0.75, 'center_y':0.5}
         theme_icon_color: "Custom"
@@ -29,7 +35,7 @@ MDScreen:
         on_press:
             root.manager.current = "workout"
     MDRectangleFlatIconButton:
-        icon: "logo.png"
+        icon: "calendar_made_by_me.png"
         icon_size: "32sp"
         font_size: 23.5
         text: "Timetable"
@@ -37,7 +43,7 @@ MDScreen:
         size_hint_y: 0.2
         theme_text_color: "Custom"
         text_color: "white"
-        line_color: "red"
+        line_color: "gray"
         md_bg_color: (33/255, 33/255, 33/255, 1)
         pos_hint: {'center_x': 0.25, 'center_y':0.3}
         theme_icon_color: "Custom"
@@ -45,22 +51,25 @@ MDScreen:
         on_press:
             root.manager.current = "date"
     MDRectangleFlatIconButton:
-        icon: "logo.png"
+        icon: "food_made_by_me.png"
         text: "Diet"
+        font_size: 20
         size_hint_x: 0.5
         size_hint_y: 0.2
         theme_text_color: "Custom"
         text_color: "white"
-        line_color: "red"
+        line_color: "gray"
         md_bg_color: (33/255, 33/255, 33/255, 1)
         pos_hint: {'center_x': 0.75, 'center_y':0.3}
         theme_icon_color: "Custom"
         icon_color: "orange"
+        on_press:
+            root.manager.current = "food"
     MDLabel:
         id: hello
-        text: f"hello"
+        text: ""
         theme_text_color: "Custom"
         text_color: 1,1,1,1
-        pos_hint: {'center_x': 0.55, 'center_y':0.8}
+        pos_hint: {'center_x': 0.65, 'center_y':0.8}
         font_size: 30
         font_name: "Roboto"

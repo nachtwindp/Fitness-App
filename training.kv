@@ -3,22 +3,34 @@ MDScreen:
     name:"training"
     MDFloatLayout:
         md_bg_color: (33/255, 150/255, 243/255, 1)
+        Image:
+            source: "man_with_phone.png"
+            size_hint: (0.3, 0.3)
+            pos_hint: {'center_x': 0.5, 'center_y':0.62}
     MDLabel:
         text: "Do as many push ups as possible"
         theme_text_color: "Custom"
         halign: "center"
         text_color: "white"
         font_size:30
-        font_name: "Roboto"
+        font_name: "Lato-Bold.ttf"
         pos_hint: {'center_x': 0.5, 'center_y':0.9}
+    MDLabel:
+        text: "hint:your chest needs to touch the button"
+        theme_text_color: "Custom"
+        halign: "center"
+        text_color: "white"
+        font_size:15
+        font_name: "Roboto"
+        pos_hint: {'center_x': 0.5, 'center_y':0.55}
     Label:
         id:counter
         text: str(root.push)
     MDFloatingActionButton:
         icon: 'weight-lifter'
         pos_hint: {"center_x": 0.5, "center_y": 0.4}
-        size_hint: (0.3, 0.1)
-        md_bg_color: (1, 0, 0, 1)
+        size_hint: (0.35, 0.12)
+        md_bg_color: (169/255, 169/255, 169/255, 1)
         on_press: root.push += 1
     MDFloatingActionButton:
         icon: 'exit-to-app'
