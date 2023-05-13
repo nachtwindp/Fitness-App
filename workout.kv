@@ -25,6 +25,7 @@ MDScreen:
         size_hint:(0.8, 0.1)
         pos_hint: {'center_x': 0.5, 'center_y':0.5}
         on_press:
+            root.manager.transition.direction = "left"
             root.manager.current = "training"
 
 

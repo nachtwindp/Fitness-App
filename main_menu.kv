@@ -42,6 +42,8 @@ MDScreen:
         pos_hint: {'center_x': 0.25, 'center_y':0.3}
         theme_icon_color: "Custom"
         icon_color: "orange"
+        on_press:
+            root.manager.current = "date"
     MDRectangleFlatIconButton:
         icon: "logo.png"
         text: "Diet"

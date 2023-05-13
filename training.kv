@@ -23,9 +23,9 @@ MDScreen:
     MDFloatingActionButton:
         icon: 'exit-to-app'
         pos_hint: {"center_x": 0.9, "center_y": 0.1}
-        md_bg_color: (0, 0, 0, 0)
+        md_bg_color: (33/255, 150/255, 243/255, 1)
         on_press:
-            root.manager.transition.direction = "left"
+            root.manager.transition.direction = "right"
             root.manager.current = "workout"
             root.push = 0
 
