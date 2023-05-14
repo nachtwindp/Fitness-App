@@ -41,6 +41,8 @@ class SweatWell(MDApp):
         date_dialog.bind(on_save=self.on_save, on_cancel=self.on_cancel)
         date_dialog.open()
 
+    def update_error_text(self):
+        self.root.get_screen("login").ids.error.text = "Please fill everything"
 
 if __name__ == "__main__":
     SweatWell().run()

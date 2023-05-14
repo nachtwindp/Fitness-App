@@ -5,6 +5,13 @@ MDScreen:
         Image:
             source:"muscle.png"
             pos_hint: {"center_x": 0.5, "center_y": 0.7}
+        MDLabel:
+            id: error
+            text: ""
+            theme_text_color: "Custom"
+            text_color: "red"
+            font_size:20
+            pos_hint: {"center_x": 0.7, "center_y": 0.2}
         MDTextField:
             id: name_field
             hint_text: "Name"
@@ -13,6 +20,7 @@ MDScreen:
             size_hint_x: .8
             mode: "round"
         MDTextField:
+            id: date
             hint_text: "Date dd/mm/yyyy"
             max_text_length: 10
             size_hint_x: .8
@@ -21,6 +29,7 @@ MDScreen:
             mode: "round"
             background_color: (169/255, 169/255, 169/255, 1)
         MDTextField:
+            id: kilograms
             hint_text: "Enter your weight"
             mode: "round"
             max_text_length: 3
@@ -28,6 +37,7 @@ MDScreen:
             helper_text: "Kilograms"
             pos_hint: {"center_x": .5, "center_y": .53}
         MDTextField:
+            id:height
             hint_text: "Enter your height"
             max_text_length: 3
             line_width: 2  # sets the width of the line
@@ -45,5 +55,12 @@ MDScreen:
             md_bg_color: (169/255, 169/255, 169/255, 1)
             on_press:
                 username = name_field.text
+                kg = kilograms.text
+                heigh = height.text
+                date_user = date.text
+                count_username = len(username)
+                count_kg = len(kg)
+                count_height = len(heigh)
+                count_date = len(date_user)
                 app.root.get_screen('main_menu').ids.hello.text = f"Welcome, {username}"
-                root.manager.current = "main_menu"
+                root.manager.current = "main_menu" if count_username > 0 and count_kg > 0 and count_height > 0 and count_date > 0 else app.update_error_text()
