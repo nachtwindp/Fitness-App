@@ -63,4 +63,8 @@ MDScreen:
                 count_height = len(heigh)
                 count_date = len(date_user)
                 app.root.get_screen('main_menu').ids.hello.text = f"Welcome, {username}"
-                root.manager.current = "main_menu" if count_username > 0 and count_kg > 0 and count_height > 0 and count_date > 0 else app.update_error_text()
+                app.root.get_screen('stats').ids.stats_username.text = username
+                app.root.get_screen('stats').ids.stats_kg.text = kg
+                app.root.get_screen('stats').ids.stats_height.text = heigh
+                app.root.get_screen('stats').ids.stats_data.text = date_user
+                root.manager.current = "main_menu" if count_username >   0 and count_kg > 0 and count_height > 0 and count_date > 0 else app.update_error_text()

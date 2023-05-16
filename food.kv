@@ -14,3 +14,23 @@ MDScreen:
             pos_hint: {"center_x": .5, "center_y": .5}
             size_hint_x: .8
             mode: "round"
+        MDFloatingActionButton:
+            icon: 'exit-to-app'
+            pos_hint: {"center_x": 0.9, "center_y": 0.1}
+            md_bg_color: (33/255, 150/255, 243/255, 1)
+            on_press:
+                root.manager.transition.direction = "right"
+                root.manager.current = "main_menu"
+        MDFillRoundFlatButton:
+            text: "Save"
+            text_color: "white"
+            font_size: 30
+            font_name: "Roboto"
+            size_hint:(0.6, 0.1)
+            pos_hint: {'center_x': 0.5, 'center_y':0.1}
+            md_bg_color: (169/255, 169/255, 169/255, 1)
+            on_press:
+                food = food_input.text
+                calories = calories_input.text
+                app.display_food(food,calories)
+

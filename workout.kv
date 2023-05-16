@@ -7,7 +7,13 @@ MDScreen:
             theme_text_color: 'Custom'
             icon_color: [1, 1, 1, 1] # set icon color to original
             user_font_size: "32sp"
-            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            pos_hint: {"center_x": 0.5, "center_y": 0.7}
+        Image:
+            source:"full_body.png"
+            theme_text_color: 'Custom'
+            icon_color: [1, 1, 1, 1] # set icon color to original
+            user_font_size: "32sp"
+            pos_hint: {"center_x": 0.5, "center_y": 0.3}
     MDLabel:
         text: "Choose your workout"
         theme_text_color: "Custom"
@@ -27,5 +33,24 @@ MDScreen:
         on_press:
             root.manager.transition.direction = "left"
             root.manager.current = "training"
+    MDRoundFlatButton:
+        text: "Full Body Workout"
+        font_size:30
+        line_width: 0.01
+        font_name: "Roboto"
+        text_color: "white"
+        md_bg_color: [0, 0, 0, 0] # set background to transparent
+        size_hint:(0.8, 0.1)
+        pos_hint: {'center_x': 0.5, 'center_y':0.3}
+        on_press:
+            root.manager.transition.direction = "left"
+            root.manager.current = "timer"
+    MDFloatingActionButton:
+        icon: 'exit-to-app'
+        pos_hint: {"center_x": 0.9, "center_y": 0.1}
+        md_bg_color: (33/255, 150/255, 243/255, 1)
+        on_press:
+            root.manager.transition.direction = "right"
+            root.manager.current = "main_menu"
 
 

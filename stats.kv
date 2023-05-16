@@ -11,6 +11,42 @@ MDScreen:
             id:counter_water
             text: f"{root.water}/8"
             pos_hint: {'center_x': 0.5, 'center_y':0.7}
+        Label:
+            id:stats_username
+            text: ""
+            theme_text_color: "Custom"
+            halign: "center"
+            text_color: "white"
+            font_size:15
+            font_name: "Roboto"
+            pos_hint: {'center_x': 0.5, 'center_y':0.55}
+        Label:
+            id:stats_height
+            text: ""
+            theme_text_color: "Custom"
+            halign: "center"
+            text_color: "white"
+            font_size:15
+            font_name: "Roboto"
+            pos_hint: {'center_x': 0.5, 'center_y':0.55}
+        Label:
+            id:stats_kg
+            text: ""
+            theme_text_color: "Custom"
+            halign: "center"
+            text_color: "white"
+            font_size:15
+            font_name: "Roboto"
+            pos_hint: {'center_x': 0.5, 'center_y':0.7}
+        Label:
+            id:stats_data
+            text: ""
+            theme_text_color: "Custom"
+            halign: "center"
+            text_color: "white"
+            font_size:15
+            font_name: "Roboto"
+            pos_hint: {'center_x': 0.5, 'center_y':0.4}
         Image:
             source: "glass.png"
             size_hint: 0.2, 0.2
@@ -20,3 +56,10 @@ MDScreen:
             pos_hint: {"center_x": 0.5, "center_y": 0.5}
             md_bg_color: (33/255, 150/255, 243/255, 1)
             on_press: root.water += 1 if root.water < 8 else root.water == 7
+        MDFloatingActionButton:
+            icon: 'exit-to-app'
+            pos_hint: {"center_x": 0.9, "center_y": 0.1}
+            md_bg_color: (33/255, 150/255, 243/255, 1)
+            on_press:
+                root.manager.transition.direction = "right"
+                root.manager.current = "main_menu"
