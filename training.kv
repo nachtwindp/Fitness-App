@@ -16,7 +16,7 @@ MDScreen:
         font_name: "Lato-Bold.ttf"
         pos_hint: {'center_x': 0.5, 'center_y':0.9}
     MDLabel:
-        text: "hint:your chest needs to touch the button"
+        text: "hint:your chest needs to touch the ground"
         theme_text_color: "Custom"
         halign: "center"
         text_color: "white"
@@ -44,6 +44,12 @@ MDScreen:
         pos_hint: {'center_x': 0.3, 'center_y': 0.2}
         text: "+5"
         on_press: root.push += 5
+    MDRaisedButton:
+        size_hint: None, None
+        size: dp(200), dp(200)
+        pos_hint: {'center_x': 0.1, 'center_y': 0.2}
+        text: "-5"
+        on_press: root.push -= 5
     MDFloatingActionButton:
         icon: 'exit-to-app'
         pos_hint: {"center_x": 0.9, "center_y": 0.1}

@@ -48,15 +48,20 @@ class SweatWell(MDApp):
     def update_error_text(self):
         self.root.get_screen("login").ids.error.text = "Please fill everything"
 
+    def clear_text_fields(self):
+        self.root.get_screen("food").ids.food_input.text = ""
+        self.root.get_screen("food").ids.calories_input.text = ""
+
     def display_food(self, foods, calories):
         total_calories = 0
         list_food.append(foods)
         list_calories.append(calories)
         food_string = ", ".join(list_food)
+        self.clear_text_fields()
         for i in range(len(list_calories)):
             total_calories += int(list_calories[i])
 
-        self.root.get_screen("date").ids.date_food.text = f"Food:{food_string}\n"
+        self.root.get_screen("date").ids.date_food.text = f"Food:{str(food_string)}\n"
         self.root.get_screen("date").ids.date_calories.text = f"Total calories for the day:{str(total_calories)}"
 
     def display_push_up(self, pushups):

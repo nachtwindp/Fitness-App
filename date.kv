@@ -4,6 +4,7 @@ MDScreen:
         md_bg_color: (33/255, 150/255, 243/255, 1)
         MDRaisedButton:
             text:"Calendar"
+            font_name: "Lato-Bold.ttf"
             pos_hint: {'center_x': 0.5, 'center_y':0.5}
             on_release:app.show_date_picker()
         MDLabel:
@@ -11,31 +12,38 @@ MDScreen:
             theme_text_color: "Custom"
             text_color: "white"
             text_font: 20
+            font_name: "Lato-Bold.ttf"
             text: ""
             pos_hint: {'center_x': 0.87, 'center_y':0.8}
         MDLabel:
             id: date_food
             theme_text_color: "Custom"
             text_color: "white"
+            font_name: "Lato-Bold.ttf"
+            text_font: 20
             text: ""
             pos_hint: {'center_x': 0.5, 'center_y':0.4}
         MDLabel:
             id: date_calories
             theme_text_color: "Custom"
             text_color: "white"
+            font_name: "Lato-Bold.ttf"
+            text_font: 20
             text: ""
             pos_hint: {'center_x': 0.5, 'center_y':0.3}
         MDLabel:
             id: push_up
             theme_text_color: "Custom"
             text_color: "white"
+            text_font: 20
             text: ""
+            font_name: "Lato-Bold.ttf"
             pos_hint: {'center_x': 0.5, 'center_y':0.2}
         MDFillRoundFlatButton:
             text: "Go back <<<"
             text_color: "white"
             font_size: 30
-            font_name: "Roboto"
+            font_name: "Lato-Bold.ttf"
             size_hint:(0.3, 0.1)
             pos_hint: {'center_x': 0.5, 'center_y':0.1}
             md_bg_color: (33/255, 150/255, 243/255, 1)

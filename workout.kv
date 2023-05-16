@@ -19,17 +19,17 @@ MDScreen:
         theme_text_color: "Custom"
         text_color: "white"
         font_size:30
-        font_name: "Roboto"
-        pos_hint: {'center_x': 0.55, 'center_y':0.9}
+        font_name: "Lato-Bold.ttf"
+        pos_hint: {'center_x': 0.53, 'center_y':0.9}
     MDRoundFlatButton:
         text: "Push-up challenge"
         font_size:30
         line_width: 0.01
-        font_name: "Roboto"
+        font_name: "Lato-Bold.ttf"
         text_color: "white"
         md_bg_color: [0, 0, 0, 0] # set background to transparent
         size_hint:(0.8, 0.1)
-        pos_hint: {'center_x': 0.5, 'center_y':0.5}
+        pos_hint: {'center_x': 0.5, 'center_y':0.7}
         on_press:
             root.manager.transition.direction = "left"
             root.manager.current = "training"
@@ -37,7 +37,7 @@ MDScreen:
         text: "Full Body Workout"
         font_size:30
         line_width: 0.01
-        font_name: "Roboto"
+        font_name: "Lato-Bold.ttf"
         text_color: "white"
         md_bg_color: [0, 0, 0, 0] # set background to transparent
         size_hint:(0.8, 0.1)
